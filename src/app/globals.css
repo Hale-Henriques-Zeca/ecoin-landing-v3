@@ -1,0 +1,61 @@
+@import "tailwindcss"; 
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+/* >>> Background cinematográfico */
+body {
+  background-color: #000 !important;
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  top: 0 !important;
+}
+
+/* >>> Remover lixo do Google Translate caso tenha sobrado */
+.goog-te-banner-frame,
+.goog-logo-link,
+.goog-te-gadget,
+.goog-te-gadget-simple,
+.skiptranslate {
+  display: none !important;
+}
+
+body > .skiptranslate > iframe {
+  display: none !important;
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 28s linear infinite;
+}
+
+@keyframes fade-in {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 1.2s ease-out forwards;
+}

@@ -1,0 +1,32 @@
+.security-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  padding: 28px;
+  border-radius: 16px;
+  backdrop-filter: blur(6px);
+  transition: 0.3s ease-in-out;
+}
+
+.security-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.25);
+  border-color: #D4AF37;
+}
+
+.security-icon {
+  font-size: 44px;
+  color: #D4AF37;
+  margin-bottom: 18px;
+}
+
+.security-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #D4AF37;
+}
+
+.security-detail {
+  font-size: 15px;
+  opacity: 0.9;
+}

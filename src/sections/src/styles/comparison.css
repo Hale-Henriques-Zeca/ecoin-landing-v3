@@ -1,0 +1,31 @@
+.comparison-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  padding: 25px;
+  border-radius: 16px;
+  backdrop-filter: blur(6px);
+  transition: 0.3s;
+}
+
+.comparison-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.25);
+}
+
+.comparison-card.highlight {
+  background: rgba(212, 175, 55, 0.08);
+  border-color: #d4af37;
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+}
+
+.card-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.card-detail {
+  font-size: 15px;
+  margin-bottom: 6px;
+  opacity: 0.9;
+}

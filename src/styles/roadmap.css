@@ -1,0 +1,37 @@
+.roadmap-line {
+  width: 4px;
+  background: linear-gradient(#D4AF37, rgba(212,175,55,0.2));
+  height: 100%;
+  margin: 0 auto;
+}
+
+.roadmap-item {
+  position: relative;
+  padding-left: 30px;
+}
+
+.roadmap-dot {
+  width: 18px;
+  height: 18px;
+  background: #D4AF37;
+  border-radius: 50%;
+  position: absolute;
+  left: -7px;
+  top: 6px;
+  box-shadow: 0 0 12px rgba(212, 175, 55, 0.6);
+}
+
+.roadmap-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  padding: 20px;
+  border-radius: 12px;
+  backdrop-filter: blur(4px);
+  transition: 0.3s ease-in-out;
+}
+
+.roadmap-card:hover {
+  transform: translateY(-6px);
+  border-color: #D4AF37;
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.3);
+}
