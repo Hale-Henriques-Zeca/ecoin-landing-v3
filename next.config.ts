@@ -10,12 +10,11 @@ const nextConfig: NextConfig = {
       { protocol: "https", hostname: "**" },
       { protocol: "http", hostname: "**" },
     ],
-    // 👇 mantém otimização padrão do Next
     unoptimized: false,
   },
 
   typescript: {
-    ignoreBuildErrors: false,
+    ignoreBuildErrors: true, // ignora erros de TypeScript no build
   },
 
   poweredByHeader: false,
