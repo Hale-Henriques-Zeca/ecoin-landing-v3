@@ -21,6 +21,8 @@
     "@vanilla-extract/recipes": "^0.5.7",
     "@vanilla-extract/sprinkles": "^1.6.5",
     "@walletconnect/ethereum-provider": "^2.23.1",
+    "@walletconnect/sign-client": "^2.23.8",
+    "@walletconnect/universal-provider": "^2.23.8",
     "axios": "^1.13.2",
     "chart.js": "^4.5.1",
     "dotenv": "^17.2.3",
