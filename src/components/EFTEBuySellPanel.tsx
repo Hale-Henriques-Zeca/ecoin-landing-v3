@@ -46,7 +46,7 @@ useEffect(() => {
       >
         <div className="flex justify-center items-center gap-3 text-[#D4AF37] text-4xl font-bold">
           <Link href="/" className="flex items-center gap-2">
-          <img src="/logo-ebc.png" alt="EdenKingDom Buy Crypto" className="h-12 w-auto" />
+          <img src="/logo-ebc.png" alt="EdenKingDom Financial Tools Empire" className="h-12 w-auto" />
   <span style={{ color: "#1FA971" }}>EdenKingDom </span>
   <span style={{ color: "#D4AF37" }}>Financial </span>
   <span style={{ color: "#FFFFFF" }}>Tools </span>
