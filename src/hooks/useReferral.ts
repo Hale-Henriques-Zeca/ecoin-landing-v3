@@ -31,28 +31,26 @@ export function useReferral() {
 
   /* ===================== READ ===================== */
   async function getInviter(): Promise<string | null> {
-    if (!address) return null;
+  if (!address) return null;
 
-    return (await publicClient.readContract({
+  return (await publicClient.readContract({
     address: CONTRACTS.REFERRAL as `0x${string}`,
     abi: referralAbi,
     functionName: "inviterOf",
     args: [address as `0x${string}`],
-    authorizationList: [],
   })) as string;
-  }
+}
 
   async function getPendingRewards(): Promise<bigint> {
-    if (!address) return 0n;
+  if (!address) return 0n;
 
-    return (await publicClient.readContract({
+  return (await publicClient.readContract({
     address: CONTRACTS.REFERRAL as `0x${string}`,
     abi: referralAbi,
     functionName: "pendingRewards",
     args: [address as `0x${string}`],
-    authorizationList: [],
   })) as bigint;
-  }
+}
 
 
   /* ===================== CLAIM ===================== */

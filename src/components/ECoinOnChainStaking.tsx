@@ -391,13 +391,14 @@ useEffect(() => {
 >
   CLAIM REWARD
 </button>
-<EcoinWalletDashboard />
+
 {Number(staking.pending) === 0 && (
   <p className="text-yellow-400 text-xs text-center">
     Nothing to claim Yet. Rewards accruing…
   </p>
+  
 )}
-
+<EcoinWalletDashboard />
 
 <button
   onClick={async () => {

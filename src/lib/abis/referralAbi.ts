@@ -11,14 +11,14 @@ export const referralAbi = [
     name: "inviterOf",
     stateMutability: "view",
     inputs: [{ name: "invitee", type: "address" }],
-    outputs: [{ type: "address" }],
+    outputs: [{ name: "inviter", type: "address" }],
   },
   {
     type: "function",
     name: "pendingRewards",
     stateMutability: "view",
     inputs: [{ name: "inviter", type: "address" }],
-    outputs: [{ type: "uint256" }],
+    outputs: [{ name: "amount", type: "uint256" }],
   },
   {
     type: "function",
