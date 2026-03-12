@@ -3,7 +3,7 @@
 import StayInLoopSection from "@/sections/StayInLoopSection";
 import EventsShowcase from "@/sections/EventsShowcase";
 import EcoinAISection from "@/sections/EcoinAISection";
-import BuyBackSmartPool from "@/app/BuyBackSmartPool";
+import BuyBackEngineChart from "@/app/BuyBackEngineChart";
 import BuildersShowcase from "@/sections/BuildersShowcase";
 import EKDSmartFinanceTool from "@/components/EKDSmartFinanceTool";
 import EFTEBuySellPanel from "@/components/EFTEBuySellPanel";
@@ -27,6 +27,7 @@ import ECoinPriceSyncInfo from "@/components/ECoinPriceSyncInfo";
 import EBCConvertSection from "@/components/EBCConvertSection"
 import CryptoGrowthSimulator from "@/components/CryptoGrowthSimulator";
 import ECoinCashOutInfo from "@/components/ECoinCashOutInfo";
+import Chart from "@/components/Chart";
 
 
 
@@ -55,7 +56,16 @@ export default function Home() {
   <div className="h-px flex-1 bg-gradient-to-r from-transparent via-[#D4AF37]/40 to-transparent" />
 </div>
 <CompoundCalculatorPanel />
-      <BuyBackSmartPool /> 
+{/* SEPARADOR*/}
+<div className="relative z-10 mt-14 mb-10 flex items-center gap-4">
+  <div className="h-px flex-1 bg-gradient-to-r from-transparent via-[#D4AF37]/40 to-transparent" />
+  <span className="text-[11px] sm:text-xs uppercase tracking-[0.35em] text-[#D4AF37]/80">
+    E-Coin (EdenKingDom Coin) Chart
+  </span>
+  <div className="h-px flex-1 bg-gradient-to-r from-transparent via-[#D4AF37]/40 to-transparent" />
+</div>
+<Chart /> 
+      <BuyBackEngineChart /> 
       <EBCConvertSection />
       <BuyBackSmartPoolDashboard />
       <ECoinPriceSyncInfo />
