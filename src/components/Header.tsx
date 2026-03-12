@@ -31,20 +31,11 @@ export default function Header() {
           </Link>
         </div>
 
-        {/* CENTER — NAV */}
-        <div className="mx-auto">
-          <nav className="flex items-center gap-8 text-sm font-medium text-[#F9D13E]">
-            <Link href="/">Home</Link>
-          </nav>
-        </div>
-
-        {/* CENTER — NAV */}
-        <div className="mx-auto">
-          <nav className="flex items-center gap-8 text-sm font-medium text-[#F9D13E]">
-            <Link href="/equipes">Team Leader</Link>
-          </nav>
-        </div>
-
+        {/* TRUE CENTER — NAV */}
+        <nav className="absolute left-1/2 -translate-x-1/2 flex items-center gap-8 text-sm font-medium text-[#F9D13E]">
+          <Link href="/">Home</Link>
+          <Link href="/equipes">Team Leader</Link>
+        </nav>
 
         {/* RIGHT — LANGUAGE */}
         <div className="absolute right-6 flex items-center">
