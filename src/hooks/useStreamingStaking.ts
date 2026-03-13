@@ -15,7 +15,7 @@ const STAKING = CONTRACTS.STREAMING_STAKING as `0x${string}`;
 export function useStreamingStaking() {
   const { address } = useAccount();
   const { writeContractAsync } = useWriteContract();
-  const publicClient = usePublicClient();
+  const publicClient = usePublicClient({ chainId: 56 });
 
   const { data: totalStaked } = useReadContract({
     abi: stakingStreamingAbi,
@@ -28,6 +28,7 @@ export function useStreamingStaking() {
     address: STAKING,
     functionName: "users",
     args: address ? [address] : undefined,
+    query: { enabled: !!address },
   });
 
   const { data: pending } = useReadContract({
@@ -35,21 +36,26 @@ export function useStreamingStaking() {
     address: STAKING,
     functionName: "pendingRewards",
     args: address ? [address] : undefined,
+    query: { enabled: !!address },
   });
 
   async function stake(amount: string) {
-  if (!amount || !address) return;
+  if (!amount || !address || Number(amount) <= 0) return;
 
   const bn = parseUnits(amount, 18);
 
   // 🔎 Verificar allowance atual
-  const allowance = await publicClient.readContract({
-      address: CONTRACTS.ECOIN as `0x${string}`,
-      abi: erc20Abi,
-      functionName: "allowance",
-      args: [address as `0x${string}`, STAKING],
-      authorizationList: [], // 
-    }) as bigint;
+
+  const ECOIN = CONTRACTS.ECOIN as `0x${string}`;
+
+  if (!publicClient) return;
+
+const allowance = await publicClient.readContract({
+  address: ECOIN,
+  abi: erc20Abi,
+  functionName: "allowance",
+  args: [address as `0x${string}`, STAKING],
+}) as bigint;
 
   // 🔐 Se não houver allowance suficiente → approve
   if (allowance < bn) {

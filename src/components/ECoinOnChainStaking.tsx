@@ -69,14 +69,26 @@ export default function ECoinOnChainStaking() {
   functionName: "stakingRewardsActive",
 });
 
-
 const { data: stakingLiquidity } = useReadContract({
   abi: erc20Abi,
   address: CONTRACTS.ECOIN,
   functionName: "balanceOf",
   args: [CONTRACTS.STREAMING_STAKING],
+  chainId: 56,
 });
 
+const { data: allowance } = useReadContract({
+  abi: erc20Abi,
+  address: CONTRACTS.ECOIN,
+  functionName: "allowance",
+  args: address
+    ? [address, CONTRACTS.STREAMING_STAKING]
+    : undefined,
+  chainId: 56,
+  query: {
+    enabled: !!address,
+  },
+});
 
   // quando a wallet conectar, abre o painel automaticamente
 useEffect(() => {
@@ -195,20 +207,20 @@ useEffect(() => {
 
 <StreamingStatsCard />
 <LiveRewardCounter
- pending={Number(staking.pending)}
+ pending={Number(staking.pending ?? 0)}
 />
 <StakingSecurityPanel />
 
 <RewardStreamIndicator />
 
 <RewardVelocity
- pending={Number(staking.pending)}
- totalStaked={Number(staking.total)}
+ pending={Number(staking.pending ?? 0)}
+ totalStaked={Number(staking.total ?? 0)}
 />
 
 <ProtocolHealth1
  liquidity={stakingLiquidity ? Number(stakingLiquidity)/1e18 : 0}
- pending={Number(staking.pending)}
+ pending={Number(staking.pending ?? 0)}
 />
 
               {/* AMOUNT */}
@@ -251,7 +263,7 @@ useEffect(() => {
     </span>
   </div>
 
-{Number(staking.pending) > 0 && (
+{Number(staking.pending ?? 0) > 0 && (
   <div className="mt-3 text-xs space-y-1 bg-black/40 border border-gray-700 rounded-xl p-3">
     <div className="flex justify-between">
       <span>Gross Reward</span>

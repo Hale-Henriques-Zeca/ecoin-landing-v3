@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import { Providers } from "./providers";
 import { DexWalletProvider } from "@/contexts/DexWalletContext";
 import { Toaster } from "react-hot-toast";
+import TxToastStack from "@/components/TxToastStack";
 
 
 export const metadata: Metadata = {
@@ -23,6 +24,7 @@ export default function RootLayout({
           <DexWalletProvider>
             <Header />
             {children}
+             <TxToastStack />
             <Toaster position="bottom-center" />
           </DexWalletProvider>
         </Providers>
