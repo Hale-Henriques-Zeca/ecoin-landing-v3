@@ -28,6 +28,8 @@ import EBCConvertSection from "@/components/EBCConvertSection"
 import CryptoGrowthSimulator from "@/components/CryptoGrowthSimulator";
 import ECoinCashOutInfo from "@/components/ECoinCashOutInfo";
 import Chart from "@/components/Chart";
+import ECoinBenefitsInfo from "@/components/ECoinBenefitsInfo";
+import ECoinRewardsInfo from "@/components/ECoinRewardsInfo";
 
 
 
@@ -37,10 +39,11 @@ export default function Home() {
       <Hero />
       <ECoinDevelopmentNotice />
        <EcoinCarousel />
-       
-      
+        <ECoinBenefitsInfo />
       <EBCConvertSection />
+      <ECoinRewardsInfo />
       <ECoinOnChainStaking />
+      <Chart /> 
       <EFTEBuySellPanel />
       <ECoinHubPage />
       <EcoinAISection />
@@ -67,7 +70,7 @@ export default function Home() {
   </span>
   <div className="h-px flex-1 bg-gradient-to-r from-transparent via-[#D4AF37]/40 to-transparent" />
 </div>
-<Chart /> 
+
       <BuyBackEngineChart /> 
       
       <BuyBackSmartPoolDashboard />
