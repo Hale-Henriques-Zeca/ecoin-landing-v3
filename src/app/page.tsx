@@ -38,10 +38,13 @@ export default function Home() {
       <ECoinDevelopmentNotice />
        <EcoinCarousel />
        
-      <EcoinAISection />
+      
+      <EBCConvertSection />
+      <ECoinOnChainStaking />
       <EFTEBuySellPanel />
       <ECoinHubPage />
-      <ECoinOnChainStaking />
+      <EcoinAISection />
+      
       
 <EKDSmartFinanceTool />
 <ECoinCashOutInfo />
@@ -66,7 +69,7 @@ export default function Home() {
 </div>
 <Chart /> 
       <BuyBackEngineChart /> 
-      <EBCConvertSection />
+      
       <BuyBackSmartPoolDashboard />
       <ECoinPriceSyncInfo />
       <BuyBackSmartPoolSection />
