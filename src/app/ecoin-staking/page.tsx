@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 
+
 export default function Page() {
   return (
     <main className="min-h-screen bg-white text-black flex flex-col">
@@ -45,24 +46,27 @@ export default function Page() {
         <div className="max-w-3xl mx-auto">
 
           <h2 className="text-2xl font-semibold mb-6">
-            What You Need to Start
+            What You Need to Start?
           </h2>
 
           <div className="space-y-4 text-gray-600">
 
-            <p>Starting is simple.</p>
+            <p>Starting is simple, just five (5) steps bellow.</p>
 
-            <p>Install a decentralized wallet such as <strong>MetaMask</strong>.</p>
+            <p>1️⃣ Install a decentralized wallet such as <strong>MetaMask</strong>.</p>
 
-            <p>Add the <strong>BNB Smart Chain (BEP-20)</strong> network.</p>
+            <p>2️⃣ Add the <strong>BNB Smart Chain (BEP-20)</strong> network.</p>
+
+            <p>3️⃣ Import the <strong>EdenKingDom Coin (E-Coin)</strong> Token that holds 18 decimals.</p>
+
 
             <p>
-              Hold a small amount of <strong>BNB</strong> for gas fees
+              4️⃣ Hold a small amount of <strong>BNB</strong> for gas fees
               (even less than <strong>$0.50</strong> is enough).
             </p>
 
             <p>
-              Deposit some <strong>Tether (BEP-20)</strong> — even
+              5️⃣ Deposit some <strong>Tether (BEP-20)</strong> — even
               <strong> $5 or $10 </strong> is enough to start.
             </p>
 
@@ -73,7 +77,7 @@ export default function Page() {
               <p>• Visit the platform</p>
               <p>• Convert <strong>USDT → E-Coin</strong></p>
               <p>• Stake your E-Coin</p>
-              <p>• Start earning from platform activity</p>
+              <p>• Start earning by seconds in On-Chain Cash-Flow stream Staking Rewards Coming from platform activity in the E-Coin Ecossystem </p>
 
             </div>
 
@@ -91,7 +95,7 @@ export default function Page() {
         <div className="max-w-3xl mx-auto">
 
           <h2 className="text-2xl font-semibold mb-10">
-            How the Rewards Are Generated
+            How the Rewards Are Generated?
           </h2>
 
           <p className="text-gray-600 mb-8">
@@ -179,7 +183,7 @@ export default function Page() {
         <div className="max-w-3xl mx-auto space-y-4 text-gray-600">
 
           <h2 className="text-2xl font-semibold text-black mb-4">
-            Why This System Is Powerful
+            Why This System Is Powerful?
           </h2>
 
           <p>Your rewards are not limited to a fixed daily percentage.</p>
